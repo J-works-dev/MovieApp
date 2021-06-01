@@ -1,240 +1,147 @@
 body {
-    font-family: "calibri light", sans-serif, "Open Sans", "Gill Sans", "Gill Sans MT", "Trebuchet MS";
-    color: rgb(68, 68, 68);
-    background-color: rgb(35, 35, 37);
+  font-family: "calibri light", sans-serif, "Open Sans", "Gill Sans",
+    "Gill Sans MT", "Trebuchet MS";
+  color: rgb(68, 68, 68);
+  /* background-color: rgb(35, 35, 37); */
 }
 
 .content {
-    position: relative;
-    max-width: 700px;
-    min-height: 600px;
-    height: 100%;
-    margin: auto;
-    background-color: rgb(228, 228, 228);
-    padding: 20px;
-    padding-bottom: 100px;
+  position: relative;
+  max-width: 700px;
+  min-height: 600px;
+  height: 100%;
+  margin: auto;
+  /* background-color: rgb(228, 228, 228); */
+  padding: 20px;
+  padding-bottom: 100px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .title {
-    text-align: center;
-    margin-bottom: -10px;
+  text-align: center;
+  margin-bottom: -10px;
 }
 
 h2 {
-    color: rgb(54, 55, 61);
-    font-size: 32px;
-    margin-left: 10px;
+  color: rgb(54, 55, 61);
+  font-size: 32px;
+  margin-left: 10px;
 }
 
 h3 {
-    color: rgb(54, 55, 61);
-    font-size: 26px;
-    margin-left: 10px;
+  color: rgb(54, 55, 61);
+  font-size: 26px;
+  margin-left: 10px;
 }
 
 .nav {
-    display: flex;
-    /* justify-content: space-between; */
-    list-style-type: none;
-    background-color:rgb(57, 64, 95);
-    padding: 10px;
-    font-family: "calibri";
-    font-size: 20px;
+  display: flex;
+  /* justify-content: space-between; */
+  list-style-type: none;
+  background-color: rgb(57, 64, 95);
+  padding: 10px;
+  font-family: "calibri";
+  font-size: 20px;
 }
 
 .nav li:last-child {
-    position: absolute;
-    /* justify-content: space-between; */
-    right: 30px;
-    opacity: 30%;
-    /* margin-right: 10px; */
+  position: absolute;
+  /* justify-content: space-between; */
+  right: 30px;
+  opacity: 30%;
+  /* margin-right: 10px; */
 }
 
 .nav-index {
-    display: inline;
-    padding: 10px;
+  display: inline;
+  padding: 10px;
 }
 
 .nav-index a {
-    text-decoration: none;
-    color: white;
-    text-align: center;
+  text-decoration: none;
+  color: white;
+  text-align: center;
 }
 
 .active {
-    background-color:rgb(42, 45, 61);
-} 
+  background-color: rgb(42, 45, 61);
+}
 
 .nav-index > a:hover {
-    color: rgb(28, 117, 98);
+  color: rgb(28, 117, 98);
 }
 
 .search-form {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .form-group {
-    margin-top: -15px;
-    display: inline-block;
-    width: 19%;
+  margin-top: -15px;
+  display: inline-block;
+  width: 19%;
 }
 .form-group input {
-    width: 90%;
+  width: 90%;
 }
 
 .table {
-    /* display: block; */
-    width: 100%;
-    font-size: 12px;
-    text-align: center;
+  /* display: block; */
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
 }
 
 .table td {
-    background-color: white;
-    height: 25px;
-    /* margin: 5px; */
-    /* padding-left: 20px; */
-    border: 1px solid rgb(199, 233, 226);
-    border-radius: 3px;
-    justify-content: center;
-    align-items: center;
-    border-collapse: collapse;
+  background-color: rgb(232, 231, 255);
+  height: 25px;
+  /* margin: 5px; */
+  /* padding-left: 20px; */
+  border: 1px solid rgb(199, 233, 226);
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  border-collapse: collapse;
 }
 
 .page-num {
-    color: red;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 15px;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 15px;
 }
 
 .current_page {
-    padding: 10px;
+  padding: 10px;
 }
 
 .page-num a {
-    text-decoration: none;
-    color: rgb(72, 135, 187);
-    padding: 10px;
+  text-decoration: none;
+  color: rgb(72, 135, 187);
+  padding: 10px;
 }
 
 .footer a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .footer {
-    /* display: block; */
-    position: absolute;
-    width: 95%;
-    text-align: center;
-    color: gray;
-    font-size: 12px;
-    bottom: 10px;
-    padding-top: 30px;
-    border-top: 1px solid gray;
-    margin-top: 50px;
+  /* display: block; */
+  position: absolute;
+  width: 95%;
+  text-align: center;
+  color: gray;
+  font-size: 12px;
+  bottom: 10px;
+  padding-top: 30px;
+  border-top: 1px solid gray;
+  margin-top: 50px;
 }
 
-/* main {
-    align-items: center;
-    margin-top: 50px;
-    margin-left: 100px;
+@media screen and (max-width: 768px) {
 }
 
-.sidebar-nav {
-    width: 170px;
-    list-style-type: none;
-    font-family: "calibri";
-    font-size: 18px;
-    margin-left: -80px;
+@media screen and (max-width: 375px) {
 }
-
-.sidebar-nav .active {
-    background-color: rgb(231, 248, 244);
-}
-
-.sidebar-nav a {
-    text-decoration: none;
-    color: rgb(36, 163, 136);
-    text-align: left;
-}
-
-.side-nav {
-    width: 170px;
-    height: 40px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: rgb(49, 214, 178);
-    background-color: rgb(231, 248, 244);
-    border: 1px solid rgb(36, 163, 136);
-    border-radius: 20px 10px;
-}
-
-.active2 {
-    background-color: rgb(49, 214, 178);
-    color: white;
-    border: 0px solid rgb(49, 214, 178);
-}
-
-.side-nav > a:hover > .side-nav{
-    color: rgb(28, 117, 98);
-}
-
-.sidebar {
-    display: inline-block;
-    width: 170px;
-    vertical-align: top;
-}
-
-.main-section {
-    display: inline-block;
-    vertical-align: top;
-    padding-left: 50px;
-}
-
-form {
-    display: inline-block;
-    min-width: 100%;
-}
-
-label {
-    color: rgb(103, 124, 122);
-    font-size: 18px;
-    margin-right: 10px;
-    margin-top: 9px;
-    margin-bottom: 8px;
-    float:left;
-}
-
-form input {
-    width: 250px;
-    height: 25px;
-    margin: 5px;
-    float: right;
-    border: 1px solid rgb(36, 163, 136);
-    border-radius: 5px;
-}
-
-.form-group {
-    float: none;
-    vertical-align: middle;
-}
-
-.btn {
-    background-color: rgb(255, 59, 59);
-    width: 350px;
-    height: 40px;
-    margin: 5px;
-    float: right;
-    border: 1px solid rgb(36, 163, 136);
-    border-radius: 5px;
-    color: white;
-    font-size: 20px;
-} */
-

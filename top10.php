@@ -8,7 +8,7 @@
     <body>
         <div class="content">
             <div class="title">
-                <a href="index.php"><img src="SMTlogo.png"></a>
+                <a href="index.php"><img src="Acme Movies.png"></a>
             </div>
             <ul class="nav">
                 <li class="nav-index"><a href="index.php">HOT 50</a></li>
