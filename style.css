@@ -2,7 +2,7 @@ body {
   font-family: "calibri light", sans-serif, "Open Sans", "Gill Sans",
     "Gill Sans MT", "Trebuchet MS";
   color: rgb(68, 68, 68);
-  /* background-color: rgb(35, 35, 37); */
+  background-color: rgb(164, 164, 184);
 }
 
 .content {
@@ -11,7 +11,7 @@ body {
   min-height: 600px;
   height: 100%;
   margin: auto;
-  /* background-color: rgb(228, 228, 228); */
+  background-color: white; /* background-color: rgb(228, 228, 228); */
   padding: 20px;
   padding-bottom: 100px;
 }
@@ -37,9 +37,19 @@ h3 {
   margin-left: 10px;
 }
 
+.title {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.title img {
+  display: flex;
+  width: 60%;
+  padding: 20px;
+}
 .nav {
   display: flex;
-  /* justify-content: space-between; */
   list-style-type: none;
   background-color: rgb(57, 64, 95);
   padding: 10px;
@@ -49,10 +59,8 @@ h3 {
 
 .nav li:last-child {
   position: absolute;
-  /* justify-content: space-between; */
   right: 30px;
   opacity: 30%;
-  /* margin-right: 10px; */
 }
 
 .nav-index {
@@ -95,11 +103,19 @@ h3 {
   text-align: center;
 }
 
-.table td {
+.table th {
   background-color: rgb(232, 231, 255);
   height: 25px;
-  /* margin: 5px; */
-  /* padding-left: 20px; */
+  border: 1px solid rgb(199, 233, 226);
+  border-radius: 3px;
+  justify-content: center;
+  align-items: center;
+  border-collapse: collapse;
+}
+
+.table td {
+  background-color: rgb(247, 247, 255);
+  height: 25px;
   border: 1px solid rgb(199, 233, 226);
   border-radius: 3px;
   justify-content: center;

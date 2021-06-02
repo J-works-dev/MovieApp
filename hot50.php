@@ -7,15 +7,15 @@
     $result = $pdo->query($sql);
 
     if ($result->rowcount() > 0) {
-        echo '<table class="table">
+        echo "<table class='table'>
             <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Studio</th>
-            <th>Rating</th>
-            <th>Year</th>
-            <th>Genre</th>
-            </tr>';
+            <th class='table-id'>ID</th>
+            <th class='table-title'>Title</th>
+            <th class='table-studio'>Studio</th>
+            <th class='table-rating'>Rating</th>
+            <th class='table-year'>Year</th>
+            <th class='table-genre'>Genre</th>
+            </tr>";
         while($row = $result->fetch(PDO::FETCH_ASSOC)) {
             $id = $row["ID"];
             $title = $row["Title"];
@@ -24,12 +24,12 @@
             $year = $row["Year"];
             $genre = $row["Genre"];
             echo "<tr>
-                <td>$id</td>
-                <td style='width: 40%;'>$title</td>
-                <td>$studio</td>
-                <td>$rating</td>
-                <td>$year</td>
-                <td>$genre</td>
+                <td class='table-id'>$id</td>
+                <td class='table-title' style='width: 40%;'>$title</td>
+                <td class='table-studio'>$studio</td>
+                <td class='table-rating'>$rating</td>
+                <td class='table-year'>$year</td>
+                <td class='table-genre'>$genre</td>
                 </tr>";
             // header("refresh:10; url=activity4.php");
         }
