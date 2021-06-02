@@ -3,12 +3,12 @@
     <head>
         <title>Web Programing Project</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="style.css?<?php echo time(); ?>" />
     </head>
     <body>
         <div class="content">
             <div class="title">
-                <a href="index.php"><img src="Acme Movies.png"></a>
+                <a class="title"  href="index.php"><img src="Acme Movies.png"></a>
             </div>
             <ul class="nav">
                 <li class="nav-index"><a href="index.php">HOT 50</a></li>

@@ -58,6 +58,7 @@ h3 {
 }
 
 .nav li:last-child {
+  display: none;
   position: absolute;
   right: 30px;
   opacity: 30%;
@@ -82,6 +83,15 @@ h3 {
   color: rgb(28, 117, 98);
 }
 
+#pc {
+  display: block;
+}
+
+#mobile,
+#tablet {
+  display: none;
+}
+
 .search-form {
   display: flex;
   justify-content: space-between;
@@ -90,7 +100,8 @@ h3 {
 .form-group {
   margin-top: -15px;
   display: inline-block;
-  width: 19%;
+  margin: 0 3px;
+  /* width: 19%; */
 }
 .form-group input {
   width: 90%;
@@ -157,7 +168,30 @@ h3 {
 }
 
 @media screen and (max-width: 768px) {
+  .table .table-status,
+  .table-sound,
+  .table-versions,
+  .table-price,
+  .table-aspect,
+  td + td + th {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 375px) {
+  .table .table-status,
+  .table-studio,
+  .table-sound,
+  .table-versions,
+  .table-price,
+  .table-rating,
+  .table-year,
+  .table-aspect,
+  td + td + th {
+    display: none;
+  }
+
+  .search + div {
+    display: none;
+  }
 }

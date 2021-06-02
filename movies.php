@@ -6,12 +6,12 @@
     <head>
         <title>Web Programing Project</title>
         <meta charset="utf-8">
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="style.css?<?php echo time(); ?>" />
     </head>
     <body>
         <div class="content">
             <div class="title">
-                <a href="index.php"><img src="Acme Movies.png"></a>
+                <a class="title"  href="index.php"><img src="Acme Movies.png"></a>
             </div>
             <ul class="nav">
                 <li class="nav-index"><a href="index.php">HOT 50</a></li>
@@ -28,21 +28,21 @@
                                 <label for="title">Title</label>
                                 <input type="title" class="form-control" id="title" name="title">
                             </div>
-                            <div class="form-group">
+                            <div class="form-group table-genre">
                                 <label for="genre">Genre</label>
                                 <input list="genre" class="form-control" name="genre">
                                 <datalist id="genre">
                                     <?php include 'optGenre_scr.php'; ?>
                                 </datalist>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group table-rating">
                                 <label for="rating">Rating</label>
                                 <input list="rating" class="form-control" name="rating">
                                 <datalist id="rating">
                                     <?php include 'optRating_scr.php'; ?>
                                 </datalist>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group table-year">
                                 <label for="year">Year</label>
                                 <input list="year" class="form-control" name="year">
                                 <datalist id="year">

@@ -1,10 +1,17 @@
 <?php
+//     echo "<script type='text/javascript'>
+//     $(window).resize(function() {
+//         var width = window.innerWidth;
+//         window.location.replace('movies.php?width='+width);
+//     });
+// </script>";
+
     require("connect.php");
     $total_row = 0;
     $start_from = 0;
     $total_pages = 0;
-    $result_per_page = 25;
-
+    $result_per_page = 15;
+    
     $sql = "SELECT * FROM movies";
     $result = $pdo->query($sql);
 
