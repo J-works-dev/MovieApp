@@ -17,7 +17,7 @@
                 <li class="nav-index"><a href="index.php">HOT 50</a></li>
                 <li class="nav-index active"><a href="movies.php">Movies</a></li>
                 <li class="nav-index"><a href="top10.php">Top 10</a></li>
-                <li class="nav-index"><a href="loadMovies.php">Load Movies</a></li>
+                <li class="nav-index"><a href="subscription.php">News Letter Subscription</a></li>
             </ul>
             <main>
                 <section>
@@ -70,7 +70,7 @@
                 </section>
             </main>
             <div class="footer">
-                <p>Web Programming Project | Sang Joon Lee | 30024165 | <a href="mailto:30024165@tafe.wa.edu.au">30024165@tafe.wa.edu.au</a></p>
+                <p>Rapid Application Development | Dream Team Supreme | <a href="mailto:30024165@tafe.wa.edu.au">30024165@tafe.wa.edu.au</a></p>
             </div>
         </div>
     </body>
