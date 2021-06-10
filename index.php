@@ -27,7 +27,7 @@
                     else
                     {
                         ?>
-                            <li class="nav-index"><a href="subscription.php">News Letter Subscription</a></li>
+                            <li class="nav-index"><a href="subscription.php">Join</a></li>
                         <?php
                     }
                 ?>
