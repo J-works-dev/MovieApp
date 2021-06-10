@@ -63,9 +63,15 @@
             $genre = $row["Genre"];
             $aspect = $row["Aspect"];
             if (isset($_COOKIE['admin'])) {
-                echo "<tr>
-                    <td class='table-id' onclick=popfields($id)><a href='modification.php?updateMovie=$id'>$id</a></td>
-                    <td class='table-title'>$title</td>
+                echo "<tr>";
+                if (isset($_GET['updateMovie'])) {
+                    echo "<td class='table-id' onclick=popfields($id)><a href='modification.php?updateMovie=$id'>$id</a></td>";
+                } elseif (isset($_GET['deleteMovie'])) {
+                    echo "<td class='table-id' onclick=popfields($id)><a href='modification.php?deleteMovie=$id'>$id</a></td>";
+                } else {
+                    echo "<td class='table-id'>$id</td>";
+                }
+                echo "<td class='table-title'>$title</td>
                     <td class='table-studio'>$studio</td>
                     <td class='table-status'>$status</td>
                     <td class='table-sound'>$sound</td>

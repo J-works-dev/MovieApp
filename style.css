@@ -348,8 +348,18 @@ button {
   width: 62%;
   margin-left: 120px;
   padding: 10px;
+  border: 0px;
   color: white;
   background-color: rgb(85, 89, 148);
+}
+
+.deleteBtn {
+  width: 62%;
+  margin-left: 120px;
+  padding: 10px;
+  border: 0px;
+  color: white;
+  background-color: red;
 }
 
 @media screen and (max-width: 768px) {

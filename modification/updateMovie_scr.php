@@ -1,6 +1,6 @@
 <section>
     <h3>Update Movie</h3>
-    <article class="updateMovie">
+    <article>
         <?php
             if ($_REQUEST['updateMovie'] == null) {
                 ?>
@@ -54,53 +54,55 @@
                     }
                 }
                 ?>
-                    <form name="updateMovie" action="modification/updateMovie.php" method="post">
-                        <div class="form-group">
-                            <label for="id">Movie ID:</label>
-                            <input type="text" class="form-control" id="id" name="id" value="<?php echo $id; ?>" readonly>
-                        </div>
-                        <div class="form-group">
-                            <label for="title">Title:</label>
-                            <input type="text" class="form-control" id="title" name="title" value="<?php echo $title; ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="studio">Studio:</label>
-                            <input type="text" class="form-control" id="studio" name="studio" value="<?php echo $studio; ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="status">Status:</label>
-                            <input type="text" class="form-control" id="status" name="status" value="<?php echo $status; ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="sound">Sound:</label>
-                            <input type="text" class="form-control" id="sound" name="sound" value="<?php echo $sound; ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="versions">Versions:</label>
-                            <input type="text" class="form-control" id="versions" name="versions" value="<?php echo $versions; ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="price">Price:</label>
-                            <input type="text" class="form-control" id="price" name="price" value="<?php echo $price; ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="rating">Rating:</label>
-                            <input type="text" class="form-control" id="rating" name="rating" value="<?php echo $rating; ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="year">Year:</label>
-                            <input type="text" class="form-control" id="year" name="year" value="<?php echo $year; ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="genre">Genre:</label>
-                            <input type="text" class="form-control" id="genre" name="genre" value="<?php echo $genre; ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="aspect">Aspect:</label>
-                            <input type="text" class="form-control" id="aspect" name="aspect" value="<?php echo $aspect; ?>">
-                        </div>
-                        <button type="submit" name = "submit" class="btn updateBtn">Update</button>
-                    </form>
+                    <div class="updateMovie">
+                        <form name="updateMovie" action="modification/updateMovie.php" method="post">
+                            <div class="form-group">
+                                <label for="id">Movie ID:</label>
+                                <input type="text" class="form-control" id="id" name="id" value="<?php echo $id; ?>" readonly>
+                            </div>
+                            <div class="form-group">
+                                <label for="title">Title:</label>
+                                <input type="text" class="form-control" id="title" name="title" value="<?php echo $title; ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="studio">Studio:</label>
+                                <input type="text" class="form-control" id="studio" name="studio" value="<?php echo $studio; ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="status">Status:</label>
+                                <input type="text" class="form-control" id="status" name="status" value="<?php echo $status; ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="sound">Sound:</label>
+                                <input type="text" class="form-control" id="sound" name="sound" value="<?php echo $sound; ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="versions">Versions:</label>
+                                <input type="text" class="form-control" id="versions" name="versions" value="<?php echo $versions; ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="price">Price:</label>
+                                <input type="text" class="form-control" id="price" name="price" value="<?php echo $price; ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="rating">Rating:</label>
+                                <input type="text" class="form-control" id="rating" name="rating" value="<?php echo $rating; ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="year">Year:</label>
+                                <input type="text" class="form-control" id="year" name="year" value="<?php echo $year; ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="genre">Genre:</label>
+                                <input type="text" class="form-control" id="genre" name="genre" value="<?php echo $genre; ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="aspect">Aspect:</label>
+                                <input type="text" class="form-control" id="aspect" name="aspect" value="<?php echo $aspect; ?>">
+                            </div>
+                            <button type="submit" name = "submit" class="btn updateBtn">Update</button>
+                        </form>
+                    </div>
                 <?php
             }
             $pdo = null;
