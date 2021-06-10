@@ -17,14 +17,20 @@
                 <li class="nav-index"><a href="movies.php">Movies</a></li>
                 <li class="nav-index"><a href="top10.php">Top 10</a></li>
                 <?php
-                    if(isset($_COOKIE['admin']) || isset($_COOKIE['root']))
+                    if(isset($_COOKIE['admin']))
                     {
                         ?>
-                            <li><a href="addEmployee.php">Modification</a></li>
+                            <li class="nav-index"><a href="modification.php">Modification</a></li>
+                            <li class="nav-index"><a href="logout.php">Log out</a></li>
+                        <?php
+                    }
+                    else
+                    {
+                        ?>
+                            <li class="nav-index"><a href="subscription.php">News Letter Subscription</a></li>
                         <?php
                     }
                 ?>
-                <li class="nav-index"><a href="subscription.php">News Letter Subscription</a></li>
             </ul>
             <main>
                 <section>

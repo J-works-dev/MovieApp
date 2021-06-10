@@ -10,12 +10,12 @@
     <body>
         <div class="content">
             <div class="title">
-                <a class="title"  href="index.php"><img src="Acme Movies.png"></a>
+                <a class="title" href="index.php"><img src="Acme Movies.png"></a>
             </div>
             <ul class="nav">
-                <li class="nav-index"><a href="index.php">Home</a></li>
+                <li class="nav-index active"><a href="index.php">Home</a></li>
                 <li class="nav-index"><a href="movies.php">Movies</a></li>
-                <li class="nav-index active"><a href="top10.php">Top 10</a></li>
+                <li class="nav-index"><a href="top10.php">Top 10</a></li>
                 <?php
                     if(isset($_COOKIE['admin']))
                     {
@@ -34,10 +34,13 @@
             </ul>
             <main>
                 <section>
-                    <h3>Top 10 Chart</h3>
-                    <p>This chart shows top 10 most frequently searched movies.</p>
                     <article>
-                        <?php include 'top10_scr.php'; ?>
+                        <h3>Thank You! 
+                        <?php
+                            setcookie('admin', '', time()-10, '/');
+                            echo "<script>alert('Logged Out');location.href='index.php';</script>";
+                            // header("Location: index.php");
+                        ?>
                     </article>
                 </section>
                 <div class="footer">

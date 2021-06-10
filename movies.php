@@ -19,7 +19,21 @@
                 <li class="nav-index"><a href="index.php">Home</a></li>
                 <li class="nav-index active"><a href="movies.php">Movies</a></li>
                 <li class="nav-index"><a href="top10.php">Top 10</a></li>
-                <li class="nav-index"><a href="subscription.php">News Letter Subscription</a></li>
+                <?php
+                    if(isset($_COOKIE['admin']))
+                    {
+                        ?>
+                            <li class="nav-index"><a href="modification.php">Modification</a></li>
+                            <li class="nav-index"><a href="logout.php">Log out</a></li>
+                        <?php
+                    }
+                    else
+                    {
+                        ?>
+                            <li class="nav-index"><a href="subscription.php">News Letter Subscription</a></li>
+                        <?php
+                    }
+                ?>
             </ul>
             <main>
                 <section>
