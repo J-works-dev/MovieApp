@@ -59,7 +59,7 @@
                     }
                     ?>
                         <div class="updateMovie">
-                            <form name="updateMovie" action="modification/deleteMovie.php" method="post">
+                            <form name="deleteMovie" action="modification/deleteMovie.php" method="post">
                                 <div class="form-group">
                                     <label for="id">Movie ID:</label>
                                     <input type="text" class="form-control" id="id" name="id" value="<?php echo $id; ?>" readonly>
