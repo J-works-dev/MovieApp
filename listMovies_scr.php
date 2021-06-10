@@ -62,19 +62,35 @@
             $year = $row["Year"];
             $genre = $row["Genre"];
             $aspect = $row["Aspect"];
-            echo "<tr>
-                <td class='table-id'>$id</td>
-                <td class='table-title'>$title</td>
-                <td class='table-studio'>$studio</td>
-                <td class='table-status'>$status</td>
-                <td class='table-sound'>$sound</td>
-                <td class='table-versions'>$versions</td>
-                <td class='table-price'>$price</td>
-                <td class='table-rating'>$rating</td>
-                <td class='table-year'>$year</td>
-                <td class='table-genre'>$genre</td>
-                <td class='table-aspect'>$aspect</td>
-                </tr>";
+            if (isset($_COOKIE['admin'])) {
+                echo "<tr>
+                    <td class='table-id' onclick=popfields($id)><a href='modification.php?updateMovie=$id'>$id</a></td>
+                    <td class='table-title'>$title</td>
+                    <td class='table-studio'>$studio</td>
+                    <td class='table-status'>$status</td>
+                    <td class='table-sound'>$sound</td>
+                    <td class='table-versions'>$versions</td>
+                    <td class='table-price'>$price</td>
+                    <td class='table-rating'>$rating</td>
+                    <td class='table-year'>$year</td>
+                    <td class='table-genre'>$genre</td>
+                    <td class='table-aspect'>$aspect</td>
+                    </tr>";
+            } else {
+                echo "<tr>
+                    <td class='table-id'>$id</td>
+                    <td class='table-title'>$title</td>
+                    <td class='table-studio'>$studio</td>
+                    <td class='table-status'>$status</td>
+                    <td class='table-sound'>$sound</td>
+                    <td class='table-versions'>$versions</td>
+                    <td class='table-price'>$price</td>
+                    <td class='table-rating'>$rating</td>
+                    <td class='table-year'>$year</td>
+                    <td class='table-genre'>$genre</td>
+                    <td class='table-aspect'>$aspect</td>
+                    </tr>";
+            }
         }
         echo "</table>";
     }

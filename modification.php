@@ -6,6 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
         <link rel="stylesheet" type="text/css" href="style.css?<?php echo time(); ?>" />
         <script src="https://kit.fontawesome.com/6df72c3e40.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
         <div class="content">
@@ -33,23 +35,80 @@
                 ?>
             </ul>
             <main>
-                <section>
-                    <article>
-                        <div class="home_container">
-                            <a href="subscription.php">
-                                <div class="customer">
-                                    <i class="fas fa-users"></i>
-                                    <h2>Customer</h2>
-                                </div>
-                            </a>
-                            <a href="login.php">
-                                <div class="admin">
-                                    <i class="fas fa-user-lock"></i>
-                                    <h2>Administrator</h2>
-                                </div>
-                            </a>
-                        </div>
-                    </article>
+                <section class="modification_main">
+                    <div class="sideNavbar">
+                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
+                            <button type="submit" name = "addMovie" class="sideBtn">Add Movie</button>
+                            <button type="submit" name = "updateMovie" class="sideBtn">Update Movie</button>
+                            <?php
+                                if (isset($_COOKIE['authority']) && $_COOKIE['authority'] == 'root')
+                                {
+                                    ?>
+                                        <button type="submit" name = "deleteMovie" class="sideBtn">Delete Movie</button>
+                                    <?php
+                                }
+                            ?>
+                            <button type="submit" name = "addUser" class="sideBtn">Add User</button>
+                            <button type="submit" name = "updateUser" class="sideBtn">Update User</button>
+                            <?php
+                                if (isset($_COOKIE['authority']) && $_COOKIE['authority'] == 'root')
+                                {
+                                    ?>
+                                        <button type="submit" name = "deleteUser" class="sideBtn">Delete User</button>
+                                    <?php
+                                }
+                            ?>
+                        </form>
+                        <!-- <ul class="sideNav">
+                            <li class="nave-index">Add Movie</li>
+                            <li class="nave-index">Update Movie</li>
+                            <?php
+                                if ($_COOKIE['authority'] == 'root')
+                                {
+                                    ?>
+                                        <li class="nave-index">Delete Movie</li>
+                                    <?php
+                                }
+                            ?>
+                            <li class="nave-index">Add User</li>
+                            <li class="nave-index">Update User</li>
+                            <?php
+                                if ($_COOKIE['authority'] == 'root')
+                                {
+                                    ?>
+                                        <li class="nave-index">Delete User</li>
+                                    <?php
+                                }
+                            ?>
+                        </ul> -->
+                    </div>
+                    <div class="modi_contents">
+                        <article>
+                            <?php
+                                if (isset($_GET['addMovie'])) {
+                                    include 'modification/addMovie_scr.php'; 
+                                }
+                                elseif (isset($_GET['updateMovie'])) {
+                                    include 'modification/updateMovie_scr.php'; 
+                                }
+                                elseif (isset($_GET['deleteMovie'])) {
+                                    include 'modification/deleteMovie_scr.php'; 
+                                }
+                                elseif (isset($_GET['addUser'])) {
+                                    include 'modification/addUser_scr.php'; 
+                                }
+                                elseif (isset($_GET['updateUser'])) {
+                                    include 'modification/updateUser_scr.php'; 
+                                }
+                                elseif (isset($_GET['deleteUser'])) {
+                                    include 'modification/deleteUser_scr.php';
+                                }
+                                else {
+                                    include 'listMovies_scr.php';
+                                }
+                            ?>
+                        </article>
+                    </div>
                 </section>
                 <div class="footer">
                     Rapid Application Development | Dream Team Supreme | <a href="mailto:30024165@tafe.wa.edu.au">30024165@tafe.wa.edu.au</a>

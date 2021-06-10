@@ -35,10 +35,11 @@
             <main>
                 <section>
                     <article>
-                        <h3>Thank You! <?php $_COOKIE['admin']?><h3>
-                        <p>The page will refresh to Home</p>
+                        <h3>Thank You! <?php echo $_COOKIE['admin'] ?><h3>
+                        <h4>The page will refresh to Home</h4>
                         <?php
                             setcookie('admin', '', time()-10, '/');
+                            setcookie('authority', '', time()-10, '/');
                             header("refresh:2; url=index.php");
                         ?>
                     </article>
