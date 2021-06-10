@@ -8,6 +8,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
         <link rel="stylesheet" type="text/css" href="style.css?<?php echo time(); ?>" />
+        <script src="https://kit.fontawesome.com/6df72c3e40.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="content">
@@ -15,7 +16,7 @@
                 <a class="title"  href="index.php"><img src="Acme Movies.png"></a>
             </div>
             <ul class="nav">
-                <li class="nav-index"><a href="index.php">HOT 50</a></li>
+                <li class="nav-index"><a href="index.php">Home</a></li>
                 <li class="nav-index active"><a href="movies.php">Movies</a></li>
                 <li class="nav-index"><a href="top10.php">Top 10</a></li>
                 <li class="nav-index"><a href="subscription.php">News Letter Subscription</a></li>

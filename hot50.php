@@ -1,42 +1,33 @@
-<?php
-    session_start();
-    require("connect.php");
-    $sql = "SELECT * FROM movies
-            ORDER BY Search DESC
-            LIMIT 50;";
-    $result = $pdo->query($sql);
-
-    if ($result->rowcount() > 0) {
-        echo "<table class='table'>
-            <tr>
-            <th class='table-id'>ID</th>
-            <th class='table-title'>Title</th>
-            <th class='table-studio'>Studio</th>
-            <th class='table-rating'>Rating</th>
-            <th class='table-year'>Year</th>
-            <th class='table-genre'>Genre</th>
-            </tr>";
-        while($row = $result->fetch(PDO::FETCH_ASSOC)) {
-            $id = $row["ID"];
-            $title = $row["Title"];
-            $studio = $row["Studio"];
-            $rating = $row["Rating"];
-            $year = $row["Year"];
-            $genre = $row["Genre"];
-            echo "<tr>
-                <td class='table-id'>$id</td>
-                <td class='table-title' style='width: 40%;'>$title</td>
-                <td class='table-studio'>$studio</td>
-                <td class='table-rating'>$rating</td>
-                <td class='table-year'>$year</td>
-                <td class='table-genre'>$genre</td>
-                </tr>";
-            // header("refresh:10; url=activity4.php");
-        }
-        echo "</table>";
-    }
-    else{
-        echo "0 results";
-    }
-    $pdo = null;
-?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Programing Project</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <link rel="stylesheet" type="text/css" href="style.css?<?php echo time(); ?>" />
+    </head>
+    <body>
+        <div class="content">
+            <div class="title">
+                <a class="title" href="index.php"><img src="Acme Movies.png"></a>
+            </div>
+            <ul class="nav">
+                <li class="nav-index active"><a href="index.php">HOT 50</a></li>
+                <li class="nav-index"><a href="movies.php">Movies</a></li>
+                <li class="nav-index"><a href="top10.php">Top 10</a></li>
+                <li class="nav-index"><a href="subscription.php">News Letter Subscription</a></li>
+            </ul>
+            <main>
+                <section>
+                    <h3>Hot 50s!!</h3>
+                    <article>
+                        <?php require 'hot50.php'; ?>
+                    </article>
+                </section>
+                <div class="footer">
+                    Rapid Application Development | Dream Team Supreme | <a href="mailto:30024165@tafe.wa.edu.au">30024165@tafe.wa.edu.au</a>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

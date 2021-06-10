@@ -91,6 +91,69 @@ h3 {
   display: none;
 }
 
+.home_container {
+  display: flex;
+  justify-content: space-around;
+}
+/* 
+.home_container i {
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  font-size: 70px;
+  margin: auto;
+  color: rgb(57, 64, 95);
+  border: 1px solid rgb(57, 64, 95);
+  border-radius: 50%;
+  margin-bottom: 16px;
+} */
+
+.customer {
+  padding: 20px;
+  padding-top: 35px;
+  margin: 5px;
+  background-color: rgb(213, 213, 255);
+  border-radius: 8%;
+  text-align: center;
+  width: 250px;
+  height: 300px;
+}
+
+.customer i {
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  font-size: 70px;
+  margin: auto;
+  color: rgb(57, 64, 95);
+  border: 1px solid rgb(57, 64, 95);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.admin {
+  padding: 20px;
+  padding-top: 35px;
+  margin: 5px;
+  background-color: rgb(255, 213, 213);
+  border-radius: 10%;
+  text-align: center;
+  width: 250px;
+  height: 300px;
+}
+
+.admin i {
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  font-size: 70px;
+  margin: auto;
+  color: rgb(95, 57, 57);
+  border: 1px solid rgb(95, 57, 57);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
 .search-form {
   display: flex;
   justify-content: space-between;
