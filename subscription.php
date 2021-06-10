@@ -22,18 +22,18 @@
                     <article class="subscription">
                         <div class="subscription_form">
                             <h3>News Letter Subscription</h3>
-                            <form action="subscription_scr.php" method="post">
+                            <form action="subscribe_scr.php" method="post">
                                 <div class="form-group">
                                     <label for="first_name">First Name:</label>
-                                    <input type="text" class="form-control" id="first_name" name="first_name">
+                                    <input type="text" class="form-control" id="first_name" name="first_name" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="last_name">Last Name:</label>
-                                    <input type="text" class="form-control" id="last_name" name="last_name">
+                                    <input type="text" class="form-control" id="last_name" name="last_name" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="email">E-mail Address:</label>
-                                    <input type="email" class="form-control" id="email" name="email">
+                                    <input type="email" class="form-control" id="email" name="email" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="monthlySubStatus">Monthly Sub: </label>
@@ -48,14 +48,10 @@
                         </div>
                         <div class="subscription_cancle_form">
                             <h3>Cancel Subscription</h3>
-                            <form action="subscription_scr.php" method="post">
+                            <form action="unsubscribe_scr.php" method="post">
                                 <div class="form-group">
                                     <label for="email">E-mail Address:</label>
                                     <input type="email" class="form-control" id="email" name="email">
-                                </div>
-                                <div class="form-group">
-                                    <label for="subStatus">Cancel Subscription: </label>
-                                    <input type="checkbox" class="form-control" id="subStatus" name="subStatus" value="1">
                                 </div>
                                 <button type="submit" name = "submit" class="btn btn-default">Remove</button>
                             </form>
