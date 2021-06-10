@@ -60,7 +60,7 @@ h3 {
 .nav li:last-child {
   position: absolute;
   right: 30px;
-  opacity: 80%;
+  /* opacity: 80%; */
 }
 
 .nav-index {
@@ -244,5 +244,21 @@ h3 {
 
   .search + div {
     display: none;
+  }
+
+  /* .nav {
+    font-size: 18px;
+  } */
+  .nav li:last-child a {
+    visibility: hidden;
+  }
+  .nav li:last-child a:after {
+    content: "Sub";
+    visibility: visible;
+  }
+
+  .active {
+    background-color: transparent;
+    color: rgb(42, 45, 61);
   }
 }
