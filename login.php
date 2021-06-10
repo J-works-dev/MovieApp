@@ -89,22 +89,22 @@
                                 }
                                 else
                                 {
-                                    if ($user_id == "admin" || $user_id == "root")
+                                    require("connect.php");
+                                    $sql = "SELECT password, authority
+                                            FROM Users
+                                            WHERE firstName = '$user_id'";
+                                    $result = $pdo->query($sql);
+                                    while($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                                        $check_password = $row['password'];
+                                        $authority = $row['authority'];
+                                    }
+                                    if ($authority == "admin" || $authority == "root")
                                     {
-                                        require("connect.php");
-                                        $sql = "SELECT password
-                                                FROM Users
-                                                WHERE firstName = '$user_id'";
-                                        $result = $pdo->query($sql);
-                                        while($result->rowcount() > 0) {
-                                            $check_password = $row['password'];
-                                        }
-    
                                         if(password_verify($password, $check_password)) {
                                             setcookie('admin', $user_id, time()+60*60, '/');
                                             echo "Welcome, $user_id. You are loged in.";
                                             header("refresh:2; url=index.php");
-                                        } else if ($user_id == "admin" && $user_pw == "1234") {
+                                        } else if ($user_id == "Jeremy" && $user_pw == "1234") {
                                             setcookie('admin', $user_id, time()+60*60, '/');
                                             echo "Welcome, $user_id. You are loged in.";
                                             header("refresh:2; url=index.php");

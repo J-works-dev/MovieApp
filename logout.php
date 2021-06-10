@@ -35,11 +35,11 @@
             <main>
                 <section>
                     <article>
-                        <h3>Thank You! 
+                        <h3>Thank You! <?php $_COOKIE['admin']?><h3>
+                        <p>The page will refresh to Home</p>
                         <?php
                             setcookie('admin', '', time()-10, '/');
-                            echo "<script>alert('Logged Out');location.href='index.php';</script>";
-                            // header("Location: index.php");
+                            header("refresh:2; url=index.php");
                         ?>
                     </article>
                 </section>
