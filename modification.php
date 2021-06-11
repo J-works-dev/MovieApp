@@ -36,6 +36,7 @@
             </ul>
             <main>
                 <section class="modification_main">
+                    <!-- Side Nav Bar -->
                     <div class="sideNavbar">
                         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
                             <button type="submit" name = "addMovie" class="sideBtn">Add Movie</button>
@@ -59,28 +60,6 @@
                                 }
                             ?>
                         </form>
-                        <!-- <ul class="sideNav">
-                            <li class="nave-index">Add Movie</li>
-                            <li class="nave-index">Update Movie</li>
-                            <?php
-                                if ($_COOKIE['authority'] == 'root')
-                                {
-                                    ?>
-                                        <li class="nave-index">Delete Movie</li>
-                                    <?php
-                                }
-                            ?>
-                            <li class="nave-index">Add User</li>
-                            <li class="nave-index">Update User</li>
-                            <?php
-                                if ($_COOKIE['authority'] == 'root')
-                                {
-                                    ?>
-                                        <li class="nave-index">Delete User</li>
-                                    <?php
-                                }
-                            ?>
-                        </ul> -->
                     </div>
                     <div class="modi_contents">
                         <article>

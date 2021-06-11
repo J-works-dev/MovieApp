@@ -50,7 +50,6 @@
                                         <input type="password" class="form-control" id="password" name="password">
                                     </div>
                                     <button type="submit" name = "submit" class="btn btn-default">Log In</button>
-                                    <!-- <button formaction="join.php" class="btn btn-default">Join In</button> -->
                                 </form>
                             </div>
                             <?php
@@ -58,7 +57,7 @@
                             else {
                                 $error_msg = "";
 
-                                // Employee loged in
+                                // Loged in Verification
                                 if(!empty($_POST['user_id']))
                                 {
                                     $user_id = $_POST['user_id'];
@@ -83,8 +82,6 @@
                                 if(!empty($error_msg))
                                 {
                                     echo "<h3>Error: </h3>" . $error_msg;
-                                    // echo "<script>alert('Error: $error_msg');location.href='index.php';</script>";
-                                    // header("Location: index.php?login=true");
                                     echo "<h3>Please go <a href='javascript:history.go(-1)'>back</a> and try again</h3>";
                                 }
                                 else
@@ -100,9 +97,9 @@
                                     }
                                     if ($authority == "admin" || $authority == "root")
                                     {
-                                        if(password_verify($password, $check_password)) {
-                                            setcookie('admin', $user_id, time()+60*60, '/');
-                                            setcookie('authority', $authority, time()+60*60, '/');
+                                        if(password_verify($password, $check_password)) { // if Password is hashed, this works
+                                            setcookie('admin', $user_id, time()+60*60, '/'); // set User Name as loged in
+                                            setcookie('authority', $authority, time()+60*60, '/'); // set Authority for access level
                                             echo "<h3>Welcome, $user_id. You are loged in.<h3>";
                                             header("refresh:2; url=index.php");
                                         } else if ($user_id == "Jeremy" && $user_pw == "1234") {    // Account for Test
