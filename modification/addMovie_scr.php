@@ -1,4 +1,8 @@
-<section>
+<?php
+    if (isset($_COOKIE['authority']) && ($_COOKIE['authority'] == 'root' || $_COOKIE['authority'] == 'admin'))
+    {
+    ?>
+    <section>
     <h3>Add Movie</h3>
     <article class="updateMovie">
         <form name="updateMovie" action="modification/addMovie.php" method="post">
@@ -46,3 +50,6 @@
         </form>
     </article>
 </section>
+<?php
+    }
+?>

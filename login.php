@@ -103,9 +103,9 @@
                                         if(password_verify($password, $check_password)) {
                                             setcookie('admin', $user_id, time()+60*60, '/');
                                             setcookie('authority', $authority, time()+60*60, '/');
-                                            echo "Welcome, $user_id. You are loged in.";
+                                            echo "<h3>Welcome, $user_id. You are loged in.<h3>";
                                             header("refresh:2; url=index.php");
-                                        } else if ($user_id == "Jeremy" && $user_pw == "1234") {
+                                        } else if ($user_id == "Jeremy" && $user_pw == "1234") {    // Account for Test
                                             setcookie('admin', $user_id, time()+60*60, '/');
                                             setcookie('authority', "root", time()+60*60, '/');
                                             echo "Welcome, $user_id. You are loged in.";

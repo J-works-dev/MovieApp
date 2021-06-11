@@ -1,4 +1,8 @@
-<section>
+<?php
+    if (isset($_COOKIE['authority']) && ($_COOKIE['authority'] == 'root' || $_COOKIE['authority'] == 'admin'))
+    {
+    ?>
+    <section>
     <h3>Update Movie</h3>
     <article>
         <?php
@@ -128,5 +132,6 @@ if ($_REQUEST['updateMovie'] == null) {
         </article>
     </section>
     <?php
-}
+    }
+    }
 ?>
