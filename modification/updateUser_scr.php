@@ -19,15 +19,15 @@
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail:</label>
-                        <input type="email" class="form-control" id="email" name="email">
+                        <input type="text" class="form-control" id="email" name="email">
                     </div>
                     <div class="form-group">
-                        <label for="authority">Authority</label>
-                        <input list="authority" class="form-control" name="year">
+                        <label for="authority">Authority:</label>
+                        <input list="authority" class="form-control" name="authority">
                         <datalist id="authority">
-                            <option value="Root"></option>
-                            <option value="Admin"></option>
-                            <option value="Customer"></option>
+                            <option value="root"></option>
+                            <option value="admin"></option>
+                            <option value="customer"></option>
                         </datalist>
                     </div>
                     <button type="submit" class="form-group btn btn-default" name="submit" value="submit">Search</button>
