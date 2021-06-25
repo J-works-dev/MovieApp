@@ -1,4 +1,13 @@
 <?php
+
+// Project Name: DTS RAD MovieDataBase website.
+// Members: Robert Jacobs / Sangjoon Lee / Mitchell Pontague
+// Due Date: 24/06/2021
+// Website Description: User interface to allow users to interact and view a database of movies. Admins can log in and 
+// manipulate the website through adding, deleting, updating and disabling entries inside the database via the website.
+// This Page Description: Php script to update a user on the database. Both the admins and the root user accounts have access to this
+// functionality.
+
     if (isset($_COOKIE['authority']) && ($_COOKIE['authority'] == 'root' || $_COOKIE['authority'] == 'admin'))
     {
     ?>
@@ -25,22 +34,14 @@
                         <label for="email">E-mail:</label>
                         <input type="text" class="form-control" id="email" name="email">
                     </div>
-                    <div class="form-group">
-                        <label for="authority">Authority:</label>
-                        <input list="authority" class="form-control" name="authority">
-                        <datalist id="authority">
-                            <option value="root"></option>
-                            <option value="admin"></option>
-                            <option value="customer"></option>
-                        </datalist>
-                    </div>
+                   
                     <button type="submit" class="form-group btn btn-default" name="submit" value="submit">Search</button>
                 </form>
                 <?php
             } else {
                 $id = $_REQUEST['updateUser'];
                 require("connect.php");
-                $sql = "SELECT * FROM users WHERE ID = $id";
+                $sql = "SELECT * FROM Users WHERE ID = $id";
                 $result = $pdo->query($sql);
                 if ($result->rowcount() > 0) {
                     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
@@ -51,7 +52,7 @@
                         $monthlySubStatus = $row["monthlySubStatus"];
                         $newsFlashSub = $row["newFlashSub"];
                         $password = $row["password"];
-                        $authority = $row["authority"];
+                        
                     }
                 }
                 ?>
@@ -77,22 +78,28 @@
                                 <label for="password">Password:</label>
                                 <input type="password" class="form-control" id="password" name="password" value="<?php echo $password; ?>">
                             </div>
-                            <div class="form-group">
-                                <label for="authority">Authority:</label>
-                                <input list="authority" class="form-control" name="authority" value="<?php echo $authority; ?>">
-                                <datalist id="authority">
-                                    <option value="Root"></option>
-                                    <option value="Admin"></option>
-                                    <option value="Customer"></option>
-                                </datalist>
-                            </div>
+                         
+                        	<?php
+            					if ($monthlySubStatus == 1) {
+                                	$check = "checked";
+                                } else {
+                                	$check = "";
+                                }
+            				?>
                             <div class="form-group">
                                 <label for="monthlySubStatus">Monthly Sub: </label>
-                                <input type="checkbox" class="form-control" id="monthlySubStatus" name="monthlySubStatus" value="<?php echo $monthlySubStatus; ?>">
+                                <input type="checkbox" class="form-control" id="monthlySubStatus" name="monthlySubStatus" value="1" <?php echo $check; ?>>
                             </div>
+                        <?php
+            					if ($newsFlashSub == 1) {
+                                	$ncheck = "checked";
+                                } else {
+                                	$ncheck = "";
+                                }
+            				?>
                             <div class="form-group">
                                 <label for="newsFlashSub">News Flash Sub: </label>
-                                <input type="checkbox" class="form-control" id="newsFlashSub" name="newsFlashSub" value="<?php echo $newsFlashSub; ?>">
+                                <input type="checkbox" class="form-control" id="newsFlashSub" name="newsFlashSub" value="1" <?php echo $ncheck; ?>>
                             </div>
                             <button type="submit" name = "submit" class="btn updateBtn">Update User</button>
                         </form>

@@ -362,6 +362,10 @@ button {
   background-color: red;
 }
 
+.top10_table {
+	margin-top: 20px;
+}
+
 @media screen and (max-width: 768px) {
   .content {
     max-width: 100%;

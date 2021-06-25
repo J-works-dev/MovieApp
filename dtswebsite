@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Programing Project</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="style.css?1623890558" />
+    </head>
+    <body>
+        <div class="content">
+            <div class="title">
+                <a class="title" href="index.php"><img src="Acme Movies.png"></a>
+            </div>
+            <ul class="nav">
+                <li class="nav-index active"><a href="index.php">HOT 50</a></li>
+                <li class="nav-index"><a href="movies.php">Movies</a></li>
+                <li class="nav-index"><a href="top10.php">Top 10</a></li>
+                <li class="nav-index"><a href="subscription.php">News Letter Subscription</a></li>
+            </ul>
+            <main>
+                <section>
+                    <h3>Hot 50s!!</h3>
+                    <article>
+                        <table class='table'>
+            <tr>
+            <th class='table-id'>ID</th>
+            <th class='table-title'>Title</th>
+            <th class='table-studio'>Studio</th>
+            <th class='table-rating'>Rating</th>
+            <th class='table-year'>Year</th>
+            <th class='table-genre'>Genre</th>
+            </tr><tr>
+                <td class='table-id'>2102</td>
+                <td class='table-title' style='width: 40%;'>Blow (Special Edition)</td>
+                <td class='table-studio'>New Line</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>2001</td>
+                <td class='table-genre'>Drama</td>
+                </tr><tr>
+                <td class='table-id'>1572</td>
+                <td class='table-title' style='width: 40%;'>Dirty Pictures</td>
+                <td class='table-studio'>MGM/UA</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>2000</td>
+                <td class='table-genre'>Drama</td>
+                </tr><tr>
+                <td class='table-id'>2269</td>
+                <td class='table-title' style='width: 40%;'>Friends: The Best Of Friends Gift Set #3 & 4</td>
+                <td class='table-studio'>Warner Brothers</td>
+                <td class='table-rating'>NR</td>
+                <td class='table-year'>1994</td>
+                <td class='table-genre'>TV Classics</td>
+                </tr><tr>
+                <td class='table-id'>711</td>
+                <td class='table-title' style='width: 40%;'>All Revved Up</td>
+                <td class='table-studio'>MGM/UA</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1997</td>
+                <td class='table-genre'>Comedy</td>
+                </tr><tr>
+                <td class='table-id'>824</td>
+                <td class='table-title' style='width: 40%;'>Next Of Kin</td>
+                <td class='table-studio'>Warner Brothers</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1989</td>
+                <td class='table-genre'>Action/Adventure</td>
+                </tr><tr>
+                <td class='table-id'>173</td>
+                <td class='table-title' style='width: 40%;'>Cat On A Hot Tin Roof (Warner)</td>
+                <td class='table-studio'>Warner Brothers</td>
+                <td class='table-rating'>NR</td>
+                <td class='table-year'>1958</td>
+                <td class='table-genre'>Drama</td>
+                </tr><tr>
+                <td class='table-id'>1511</td>
+                <td class='table-title' style='width: 40%;'>It's The Pied Piper, Charlie Brown</td>
+                <td class='table-studio'>Paramount</td>
+                <td class='table-rating'>NR</td>
+                <td class='table-year'>2000</td>
+                <td class='table-genre'>Animation</td>
+                </tr><tr>
+                <td class='table-id'>1290</td>
+                <td class='table-title' style='width: 40%;'>Angela's Ashes</td>
+                <td class='table-studio'>Paramount</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1999</td>
+                <td class='table-genre'>Drama</td>
+                </tr><tr>
+                <td class='table-id'>353</td>
+                <td class='table-title' style='width: 40%;'>First Wives Club</td>
+                <td class='table-studio'>Paramount</td>
+                <td class='table-rating'>PG</td>
+                <td class='table-year'>1996</td>
+                <td class='table-genre'>Comedy</td>
+                </tr><tr>
+                <td class='table-id'>322</td>
+                <td class='table-title' style='width: 40%;'>Exorcist, The</td>
+                <td class='table-studio'>Warner Brothers</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1973</td>
+                <td class='table-genre'>Horror</td>
+                </tr><tr>
+                <td class='table-id'>2088</td>
+                <td class='table-title' style='width: 40%;'>Godfather DVD Collection (Special Edition)</td>
+                <td class='table-studio'>Paramount</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1979</td>
+                <td class='table-genre'>Drama</td>
+                </tr><tr>
+                <td class='table-id'>1778</td>
+                <td class='table-title' style='width: 40%;'>Lost In America</td>
+                <td class='table-studio'>Warner Brothers</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1985</td>
+                <td class='table-genre'>Comedy</td>
+                </tr><tr>
+                <td class='table-id'>7</td>
+                <td class='table-title' style='width: 40%;'>2001: A Space Odyssey (Original Release)</td>
+                <td class='table-studio'>MGM/UA</td>
+                <td class='table-rating'>NR</td>
+                <td class='table-year'>1968</td>
+                <td class='table-genre'>SciFi</td>
+                </tr><tr>
+                <td class='table-id'>1746</td>
+                <td class='table-title' style='width: 40%;'>Star Trek TV #19: The Changeling/ The Apple</td>
+                <td class='table-studio'>Paramount</td>
+                <td class='table-rating'>NR</td>
+                <td class='table-year'>1967</td>
+                <td class='table-genre'>TV Classics</td>
+                </tr><tr>
+                <td class='table-id'>2065</td>
+                <td class='table-title' style='width: 40%;'>American Pie: The Ultimate Edition (R Rated Version/ Special Edition)</td>
+                <td class='table-studio'>Universal</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1999</td>
+                <td class='table-genre'>Comedy</td>
+                </tr><tr>
+                <td class='table-id'>2008</td>
+                <td class='table-title' style='width: 40%;'>Killer Klowns From Outer Space (Special Edition)</td>
+                <td class='table-studio'>MGM/UA</td>
+                <td class='table-rating'>PG-13</td>
+                <td class='table-year'>1988</td>
+                <td class='table-genre'>Horror</td>
+                </tr><tr>
+                <td class='table-id'>2254</td>
+                <td class='table-title' style='width: 40%;'>Empire Of The Ants</td>
+                <td class='table-studio'>MGM/UA</td>
+                <td class='table-rating'>PG</td>
+                <td class='table-year'>1977</td>
+                <td class='table-genre'>Horror</td>
+                </tr><tr>
+                <td class='table-id'>1379</td>
+                <td class='table-title' style='width: 40%;'>Angel</td>
+                <td class='table-studio'>Warner Brothers</td>
+                <td class='table-rating'>NR</td>
+                <td class='table-year'>1999</td>
+                <td class='table-genre'>Drama</td>
+                </tr><tr>
+                <td class='table-id'>665</td>
+                <td class='table-title' style='width: 40%;'>Man Who Shot Liberty Valance</td>
+                <td class='table-studio'>Paramount</td>
+                <td class='table-rating'>NR</td>
+                <td class='table-year'>1962</td>
+                <td class='table-genre'>Western</td>
+                </tr><tr>
+                <td class='table-id'>1632</td>
+                <td class='table-title' style='width: 40%;'>Slaughter</td>
+                <td class='table-studio'>MGM/UA</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1972</td>
+                <td class='table-genre'>Action/Adventure</td>
+                </tr><tr>
+                <td class='table-id'>1522</td>
+                <td class='table-title' style='width: 40%;'>Jurassic Park Collection: Limited Collector's Edition</td>
+                <td class='table-studio'>Universal</td>
+                <td class='table-rating'>PG-13</td>
+                <td class='table-year'>1973</td>
+                <td class='table-genre'>Action/Adventure</td>
+                </tr><tr>
+                <td class='table-id'>1714</td>
+                <td class='table-title' style='width: 40%;'>Friends: The Best Of Friends Gift Set #1 & 2: Top 10 Episodes</td>
+                <td class='table-studio'>Warner Brothers</td>
+                <td class='table-rating'>NR</td>
+                <td class='table-year'>1994</td>
+                <td class='table-genre'>TV Classics</td>
+                </tr><tr>
+                <td class='table-id'>2225</td>
+                <td class='table-title' style='width: 40%;'>Star Trek TV #35: That Which Survives/ Let That Be Your Last Battlefield</td>
+                <td class='table-studio'>Paramount</td>
+                <td class='table-rating'>NR</td>
+                <td class='table-year'>1969</td>
+                <td class='table-genre'>TV Classics</td>
+                </tr><tr>
+                <td class='table-id'>1659</td>
+                <td class='table-title' style='width: 40%;'>Baby Boom</td>
+                <td class='table-studio'>MGM/UA</td>
+                <td class='table-rating'>PG</td>
+                <td class='table-year'>1987</td>
+                <td class='table-genre'>Comedy</td>
+                </tr><tr>
+                <td class='table-id'>282</td>
+                <td class='table-title' style='width: 40%;'>Don Juan de Marco</td>
+                <td class='table-studio'>New Line</td>
+                <td class='table-rating'>PG-13</td>
+                <td class='table-year'>1995</td>
+                <td class='table-genre'>Action/Adventure</td>
+                </tr><tr>
+                <td class='table-id'>2253</td>
+                <td class='table-title' style='width: 40%;'>Christina's House</td>
+                <td class='table-studio'>MGM/UA</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>2001</td>
+                <td class='table-genre'>Horror</td>
+                </tr><tr>
+                <td class='table-id'>1300</td>
+                <td class='table-title' style='width: 40%;'>Platoon (Movie-Only Edition)</td>
+                <td class='table-studio'>MGM/UA</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1986</td>
+                <td class='table-genre'>War</td>
+                </tr><tr>
+                <td class='table-id'>1541</td>
+                <td class='table-title' style='width: 40%;'>Elvis: That's The Way It Is (Discontinued)</td>
+                <td class='table-studio'>MGM/UA</td>
+                <td class='table-rating'>G</td>
+                <td class='table-year'>1970</td>
+                <td class='table-genre'>Music</td>
+                </tr><tr>
+                <td class='table-id'>136</td>
+                <td class='table-title' style='width: 40%;'>Boys On The Side</td>
+                <td class='table-studio'>Warner Brothers</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1995</td>
+                <td class='table-genre'>Drama</td>
+                </tr><tr>
+                <td class='table-id'>1323</td>
+                <td class='table-title' style='width: 40%;'>Classic Monsters Collection (Special Edition)</td>
+                <td class='table-studio'>Universal</td>
+                <td class='table-rating'>NR</td>
+                <td class='table-year'>1970</td>
+                <td class='table-genre'>Horror</td>
+                </tr><tr>
+                <td class='table-id'>1810</td>
+                <td class='table-title' style='width: 40%;'>Support Your Local Gunfighter</td>
+                <td class='table-studio'>MGM/UA</td>
+                <td class='table-rating'>G</td>
+                <td class='table-year'>1971</td>
+                <td class='table-genre'>Comedy</td>
+                </tr><tr>
+                <td class='table-id'>1720</td>
+                <td class='table-title' style='width: 40%;'>Necessary Roughness</td>
+                <td class='table-studio'>Paramount</td>
+                <td class='table-rating'>PG-13</td>
+                <td class='table-year'>1991</td>
+                <td class='table-genre'>Comedy</td>
+                </tr><tr>
+                <td class='table-id'>29</td>
+                <td class='table-title' style='width: 40%;'>Al Pacino Collection</td>
+                <td class='table-studio'>Universal</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1970</td>
+                <td class='table-genre'>VAR</td>
+                </tr><tr>
+                <td class='table-id'>1008</td>
+                <td class='table-title' style='width: 40%;'>Shining</td>
+                <td class='table-studio'>Warner Brothers</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1980</td>
+                <td class='table-genre'>Horror</td>
+                </tr><tr>
+                <td class='table-id'>2002</td>
+                <td class='table-title' style='width: 40%;'>First Power</td>
+                <td class='table-studio'>MGM/UA</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1990</td>
+                <td class='table-genre'>Horror</td>
+                </tr><tr>
+                <td class='table-id'>429</td>
+                <td class='table-title' style='width: 40%;'>Gorillas In The Mist</td>
+                <td class='table-studio'>Universal</td>
+                <td class='table-rating'>PG-13</td>
+                <td class='table-year'>1988</td>
+                <td class='table-genre'>Drama</td>
+                </tr><tr>
+                <td class='table-id'>1962</td>
+                <td class='table-title' style='width: 40%;'>Dvorak: Symphony 9: From The New World: Harnoncourt (DVD-Audio)</td>
+                <td class='table-studio'>Warner Music</td>
+                <td class='table-rating'>NR</td>
+                <td class='table-year'>1979</td>
+                <td class='table-genre'>Music</td>
+                </tr><tr>
+                <td class='table-id'>1005</td>
+                <td class='table-title' style='width: 40%;'>Shattered Image</td>
+                <td class='table-studio'>Universal</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1998</td>
+                <td class='table-genre'>Mystery/Suspense</td>
+                </tr><tr>
+                <td class='table-id'>1869</td>
+                <td class='table-title' style='width: 40%;'>Eight Men Out</td>
+                <td class='table-studio'>MGM/UA</td>
+                <td class='table-rating'>PG</td>
+                <td class='table-year'>1988</td>
+                <td class='table-genre'>Drama</td>
+                </tr><tr>
+                <td class='table-id'>1184</td>
+                <td class='table-title' style='width: 40%;'>Twilight Zone Volume 15</td>
+                <td class='table-studio'>Panasonic</td>
+                <td class='table-rating'>NR</td>
+                <td class='table-year'>1978</td>
+                <td class='table-genre'>TV Classics</td>
+                </tr><tr>
+                <td class='table-id'>327</td>
+                <td class='table-title' style='width: 40%;'>Extreme Measures</td>
+                <td class='table-studio'>Warner Brothers</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1996</td>
+                <td class='table-genre'>Mystery/Suspense</td>
+                </tr><tr>
+                <td class='table-id'>1563</td>
+                <td class='table-title' style='width: 40%;'>Morrissey: Oye Esteban!</td>
+                <td class='table-studio'>Warner Music</td>
+                <td class='table-rating'>NR</td>
+                <td class='table-year'>1971</td>
+                <td class='table-genre'>Music</td>
+                </tr><tr>
+                <td class='table-id'>1270</td>
+                <td class='table-title' style='width: 40%;'>Zero Effect</td>
+                <td class='table-studio'>Warner Brothers</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1998</td>
+                <td class='table-genre'>Drama</td>
+                </tr><tr>
+                <td class='table-id'>1594</td>
+                <td class='table-title' style='width: 40%;'>Corrs: Live At The Royal Albert Hall</td>
+                <td class='table-studio'>Warner Music</td>
+                <td class='table-rating'>NR</td>
+                <td class='table-year'>2000</td>
+                <td class='table-genre'>Music</td>
+                </tr><tr>
+                <td class='table-id'>1145</td>
+                <td class='table-title' style='width: 40%;'>Thumbelina</td>
+                <td class='table-studio'>Warner Brothers</td>
+                <td class='table-rating'>UNK</td>
+                <td class='table-year'>1994</td>
+                <td class='table-genre'>Animation</td>
+                </tr><tr>
+                <td class='table-id'>617</td>
+                <td class='table-title' style='width: 40%;'>Major Payne</td>
+                <td class='table-studio'>Universal</td>
+                <td class='table-rating'>PG-13</td>
+                <td class='table-year'>1995</td>
+                <td class='table-genre'>Comedy</td>
+                </tr><tr>
+                <td class='table-id'>1697</td>
+                <td class='table-title' style='width: 40%;'>City Of Industry</td>
+                <td class='table-studio'>MGM/UA</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1997</td>
+                <td class='table-genre'>Mystery/Suspense</td>
+                </tr><tr>
+                <td class='table-id'>513</td>
+                <td class='table-title' style='width: 40%;'>Jackal (DTS)</td>
+                <td class='table-studio'>Universal</td>
+                <td class='table-rating'>R</td>
+                <td class='table-year'>1997</td>
+                <td class='table-genre'>Action/Adventure</td>
+                </tr><tr>
+                <td class='table-id'>1987</td>
+                <td class='table-title' style='width: 40%;'>T-Rex: Back To The Cretaceous: IMAX</td>
+                <td class='table-studio'>Warner Brothers</td>
+                <td class='table-rating'>NR</td>
+                <td class='table-year'>1998</td>
+                <td class='table-genre'>Special Interest</td>
+                </tr><tr>
+                <td class='table-id'>1010</td>
+                <td class='table-title' style='width: 40%;'>Short #1</td>
+                <td class='table-studio'>Warner Brothers</td>
+                <td class='table-rating'>NR</td>
+                <td class='table-year'>1997</td>
+                <td class='table-genre'>Other</td>
+                </tr></table>                    </article>
+                </section>
+                <div class="footer">
+                    Rapid Application Development | Dream Team Supreme | <a href="mailto:30024165@tafe.wa.edu.au">30024165@tafe.wa.edu.au</a>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>

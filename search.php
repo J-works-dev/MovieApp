@@ -3,6 +3,16 @@
 ?>
 <!DOCTYPE html>
 <html>
+
+<!-- Project Name: DTS RAD MovieDataBase website.
+ Members: Robert Jacobs / Sangjoon Lee / Mitchell Pontague
+ Due Date: 24/06/2021
+ Website Description: User interface to allow users to interact and view a database of movies. Admins can log in and 
+ manipulate the website through adding, deleting, updating and disabling entries inside the database via the website.
+ This Page Description:  This page is the front end of the search functionality. Once the user has chosen the search criteria and 
+ hit the search button this page will be displayed with all the results.-->
+
+
     <head>
         <title>Web Programing Project</title>
         <meta charset="utf-8">
@@ -63,7 +73,7 @@
                 </section>
             </main>
             <div class="footer">
-                <p>Web Programming Project | Sang Joon Lee | 30024165 | <a href="mailto:30024165@tafe.wa.edu.au">30024165@tafe.wa.edu.au</a></p>
+                <p>Rapid Applicaation Development | Dream Team Supreme | <a href="mailto:30024165@tafe.wa.edu.au">30024165@tafe.wa.edu.au</a></p>
             </div>
         </div>
     </body>

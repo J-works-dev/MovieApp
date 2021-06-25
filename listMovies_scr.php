@@ -1,13 +1,23 @@
 <?php
+
+// Project Name: DTS RAD MovieDataBase website.
+// Members: Robert Jacobs / Sangjoon Lee / Mitchell Pontague
+// Due Date: 24/06/2021
+// Website Description: User interface to allow users to interact and view a database of movies. Admins can log in and 
+// manipulate the website through adding, deleting, updating and disabling entries inside the database via the website.
+// This Page Description: This script selects all data with no limits and sends the information to the listMovies.php page to be displayed to the user.
+// This works simply as a front end display of the entire movie database.
+
     require("connect.php");
     $total_row = 0;
     $start_from = 0;
     $total_pages = 0;
-    $result_per_page = 15;
+    $result_per_page = 15; // Sets a limit on how many results can be displayed on each page.
     
     $sql = "SELECT * FROM movies";
     $result = $pdo->query($sql);
 
+	// Configurations on how many results can be on each page, when the limit of 15 is reached a new page is added and displayed.
     if ($result->rowcount() > 0) {
         while($row = $result->fetch(PDO::FETCH_ASSOC)) {
             $total_row++;
@@ -28,6 +38,7 @@
     $sql = "SELECT * FROM movies LIMIT $start_from, $result_per_page;";
     $result = $pdo->query($sql);
 
+	// Displays table on Page.
     if ($result->rowcount() > 0) {
         echo "<table class='table'>
             <tr>
@@ -43,6 +54,7 @@
             <th class='table-genre'>Genre</th>
             <th class='table-aspect'>Aspect</th>
             </tr>";
+    
         while($row = $result->fetch(PDO::FETCH_ASSOC)) {
             $id = $row["ID"];
             $title = $row["Title"];
@@ -55,6 +67,9 @@
             $year = $row["Year"];
             $genre = $row["Genre"];
             $aspect = $row["Aspect"];
+        
+        // If the admin or root login is enabled extra buttons are added to the page.
+        // This acts as extra permissions for different users.
             if (isset($_COOKIE['admin'])) {
                 echo "<tr>";
                 if (isset($_GET['updateMovie'])) {
@@ -96,6 +111,8 @@
     else{
         echo "<h3>0 results</h3>";
     }
+
+	// Rest of PHP is organising the "numbers" at the bottom of the page to allow the user to cycle and display different sets of data.
     echo "<div class='page-num'>";
     if ($total_pages < 15)
     {

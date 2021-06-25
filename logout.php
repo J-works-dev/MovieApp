@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html>
+
+<!-- Project Name: DTS RAD MovieDataBase website.
+ Members: Robert Jacobs / Sangjoon Lee / Mitchell Pontague
+ Due Date: 24/06/2021
+ Website Description: User interface to allow users to interact and view a database of movies. Admins can log in and 
+ manipulate the website through adding, deleting, updating and disabling entries inside the database via the website.
+ This Page Description: Allows the user to logout of the website. A message is displayed on the page once the "Logout" button is clicked. -->
+
+
+
     <head>
         <title>Web Programing Project</title>
         <meta charset="utf-8">

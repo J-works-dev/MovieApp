@@ -1,4 +1,12 @@
 <?php
+
+// Project Name: DTS RAD MovieDataBase website.
+// Members: Robert Jacobs / Sangjoon Lee / Mitchell Pontague
+// Due Date: 24/06/2021
+// Website Description: User interface to allow users to interact and view a database of movies. Admins can log in and 
+// manipulate the website through adding, deleting, updating and disabling entries inside the database via the website.
+// This Page Description: Php script to delete a user from the database. Only the root admin has access to this functionality.
+
     if (isset($_COOKIE['authority']) && $_COOKIE['authority'] == 'root')
     {
     ?>
@@ -25,22 +33,14 @@
                             <label for="email">E-mail:</label>
                             <input type="text" class="form-control" id="email" name="email">
                         </div>
-                        <div class="form-group">
-                            <label for="authority">Authority:</label>
-                            <input list="authority" class="form-control" name="authority">
-                            <datalist id="authority">
-                                <option value="root"></option>
-                                <option value="admin"></option>
-                                <option value="customer"></option>
-                            </datalist>
-                        </div>
+                       
                         <button type="submit" class="form-group btn btn-default" name="submit" value="submit">Search</button>
                     </form>
                     <?php
                 } else {
                     $id = $_REQUEST['deleteUser'];
                     require("connect.php");
-                    $sql = "SELECT * FROM users WHERE ID = $id";
+                    $sql = "SELECT * FROM Users WHERE ID = $id";
                     $result = $pdo->query($sql);
                     if ($result->rowcount() > 0) {
                         while($row = $result->fetch(PDO::FETCH_ASSOC)) {
@@ -51,7 +51,7 @@
                             $monthlySubStatus = $row["monthlySubStatus"];
                             $newsFlashSub = $row["newFlashSub"];
                             $password = $row["password"];
-                            $authority = $row["authority"];
+                            
                         }
                     }
                     ?>
@@ -77,15 +77,7 @@
                                     <label for="password">Password:</label>
                                     <input type="password" class="form-control" id="password" name="password" value="<?php echo $password; ?>" readonly>
                                 </div>
-                                <div class="form-group">
-                                    <label for="authority">Authority:</label>
-                                    <input list="authority" class="form-control" name="authority" value="<?php echo $authority; ?>" readonly>
-                                    <datalist id="authority">
-                                        <option value="Root"></option>
-                                        <option value="Admin"></option>
-                                        <option value="Customer"></option>
-                                    </datalist>
-                                </div>
+                              
                                 <button type="submit" name = "submit" class="btn deleteBtn">Delete User</button>
                             </form>
                         </div>

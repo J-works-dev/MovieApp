@@ -1,4 +1,14 @@
 <?php
+
+// Project Name: DTS RAD MovieDataBase website.
+// Members: Robert Jacobs / Sangjoon Lee / Mitchell Pontague
+// Due Date: 24/06/2021
+// Website Description: User interface to allow users to interact and view a database of movies. Admins can log in and 
+// manipulate the website through adding, deleting, updating and disabling entries inside the database via the website.
+// This Page Description: Php script to update a movie to the database. Both the admins and the root user accounts have access to this
+// functionality.
+
+
     if (isset($_COOKIE['authority']) && ($_COOKIE['authority'] == 'root' || $_COOKIE['authority'] == 'admin'))
     {
     ?>

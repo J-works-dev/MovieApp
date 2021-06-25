@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html>
+
+<!-- Project Name: DTS RAD MovieDataBase website.
+ Members: Robert Jacobs / Sangjoon Lee / Mitchell Pontague
+ Due Date: 24/06/2021
+ Website Description: User interface to allow users to interact and view a database of movies. Admins can log in and 
+ manipulate the website through adding, deleting, updating and disabling entries inside the database via the website.
+ This Page Description: The index page serves as the main home page of the entire website. It is the main entry point where users can login
+ as either root or admins alternatively they can click customer and use a guest account.-->
+
     <head>
         <title>Web Programing Project</title>
         <meta charset="utf-8">
@@ -10,7 +19,7 @@
     <body>
         <div class="content">
             <div class="title">
-                <a class="title" href="index.php"><img src="Acme Movies.png"></a>
+            <a class="title" href="index.php"><img src="Acme Movies.png" alt="logo image not loaded Acme Movies"></a> 
             </div>
             <ul class="nav">
                 <li class="nav-index active"><a href="index.php">Home</a></li>

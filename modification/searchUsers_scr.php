@@ -1,4 +1,12 @@
 <?php
+
+// Project Name: DTS RAD MovieDataBase website.
+// Members: Robert Jacobs / Sangjoon Lee / Mitchell Pontague
+// Due Date: 24/06/2021
+// Website Description: User interface to allow users to interact and view a database of movies. Admins can log in and 
+// manipulate the website through adding, deleting, updating and disabling entries inside the database via the website.
+// This Page Description: Allows the admin staff to search for users via the database. Displays them with usual format similar to the movie pages.
+
     require "connect.php";
     $total_row = 0;
     $start_from = 0;
@@ -10,7 +18,7 @@ if (isset($_SESSION["title"]) || isset($_SESSION["genre"]) || isset($_SESSION["r
     $s_lastName = $_SESSION["lastName"];
     $s_firstName = $_SESSION["firstName"];
     $s_email = $_SESSION["email"];
-    $s_authority = $_SESSION["authority"];
+   
 }
 else
 {
@@ -18,41 +26,38 @@ else
     $s_lastName = $_POST["lastName"];
     $s_firstName = $_POST["firstName"];
     $s_email = $_POST["email"];
-    $s_authority = $_POST["authority"];
+   
 }
 if (isset($_POST["submit"])) {
     $s_id = $_POST["id"];
     $s_lastName = $_POST["lastName"];
     $s_firstName = $_POST["firstName"];
     $s_email = $_POST["email"];
-    $s_authority = $_POST["authority"];
+   
 }
 
 if (!empty($s_id)) {
-    $sql = "SELECT * FROM users
+    $sql = "SELECT * FROM Users
             WHERE ID = '$s_id';";
 }
 elseif (!empty($s_lastName)) {
-    $sql = "SELECT * FROM users
+    $sql = "SELECT * FROM Users
             WHERE lastName = '%$s_lastName%';";
 }
 elseif (!empty($s_firstName)) {
-    $sql = "SELECT * FROM users
+    $sql = "SELECT * FROM Users
             WHERE firstName = '%$s_firstName%';";
 }
 elseif (!empty($s_email)) {
-    $sql = "SELECT * FROM users
+    $sql = "SELECT * FROM Users
             WHERE email = '%$s_email%';";
 }
-elseif (!empty($s_authority)) {
-    $sql = "SELECT * FROM users
-            WHERE authority = '$s_authority';";
-}
+
 $_SESSION["id"] = $s_id;
 $_SESSION["lastName"] = $s_lastName;
 $_SESSION["firstName"] = $s_firstName;
 $_SESSION["email"] = $s_email;
-$_SESSION["authority"] = $s_authority;
+
 
 $result = $pdo->query($sql);
     
@@ -72,30 +77,26 @@ else
 }; 
 
 if (!empty($s_id)) {
-    $sql = "SELECT * FROM users
+    $sql = "SELECT * FROM Users
             WHERE ID = '$s_id'
             LIMIT $start_from, $result_per_page;";
 }
 elseif (!empty($s_lastName)) {
-    $sql = "SELECT * FROM users
+    $sql = "SELECT * FROM Users
             WHERE lastName LIKE '%$s_lastName%'
             LIMIT $start_from, $result_per_page;";
 }
 elseif (!empty($s_firstName)) {
-    $sql = "SELECT * FROM users
+    $sql = "SELECT * FROM Users
             WHERE firstName LIKE '%$s_firstName%'
             LIMIT $start_from, $result_per_page;";
 }
 elseif (!empty($s_email)) {
-    $sql = "SELECT * FROM users
+    $sql = "SELECT * FROM Users
             WHERE email LIKE '%$s_email%'
             LIMIT $start_from, $result_per_page;";
 }
-elseif (empty($s_authority)) {
-    $sql = "SELECT * FROM users
-            WHERE authority = '$s_authority'
-            LIMIT $start_from, $result_per_page;";
-}
+
     $result = $pdo->query($sql);
 
 if ($result->rowcount() > 0) {
@@ -108,7 +109,6 @@ if ($result->rowcount() > 0) {
         <th>monthly Sub</th>
         <th>News Flash Sub</th>
         <th>Password</th>
-        <th>Authority</th>
         </tr>";
     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
         $id = $row["ID"];
@@ -118,7 +118,7 @@ if ($result->rowcount() > 0) {
         $monthlySubStatus = $row["monthlySubStatus"];
         $newFlashSub = $row["newFlashSub"];
         $password = $row["password"];
-        $authority = $row["authority"];
+       
         echo "<tr>";
         if (isset($_GET['updateUser'])) {
             echo "<td onclick=popfields($id)><a href='modification.php?updateUser=$id'>$id</a></td>";
@@ -133,7 +133,6 @@ if ($result->rowcount() > 0) {
             <td>$monthlySubStatus</td>
             <td>$newFlashSub</td>
             <td>$password</td>
-            <td>$authority</td>
             </tr>";
     }
     echo "</table>";

@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html>
+
+<!-- Project Name: DTS RAD MovieDataBase website.
+ Members: Robert Jacobs / Sangjoon Lee / Mitchell Pontague
+ Due Date: 24/06/2021
+ Website Description: User interface to allow users to interact and view a database of movies. Admins can log in and 
+ manipulate the website through adding, deleting, updating and disabling entries inside the database via the website.
+ This Page Description:  Allows a user to log in as either a root admin or a normal admin. Different permissions and functionality 
+ are applied to different groups. The root user can delete entries and the normal admin cannot.-->
+
+
     <head>
         <title>Web Programing Project</title>
         <meta charset="utf-8">
@@ -10,7 +20,7 @@
     <body>
         <div class="content">
             <div class="title">
-                <a class="title" href="index.php"><img src="Acme Movies.png"></a>
+                <a class="title" href="index.php"><img src="Acme Movies.png"alt="logo image not loaded Acme Movies"></a>
             </div>
             <ul class="nav">
                 <li class="nav-index active"><a href="index.php">Home</a></li>
@@ -68,7 +78,7 @@
                                 {
                                     $error_msg .= "<h3>ID is required</h3>";
                                 }
-                                // password
+                                // Password Verification.
                                 if(!empty($_POST['password']))
                                 {
                                     $user_pw = $_POST['password'];
@@ -88,8 +98,8 @@
                                 {
                                     require("connect.php");
                                     $sql = "SELECT password, authority
-                                            FROM Users
-                                            WHERE firstName = '$user_id'";
+                                            FROM admin
+                                            WHERE firstName = '$user_id';";
                                     $result = $pdo->query($sql);
                                     while($row = $result->fetch(PDO::FETCH_ASSOC)) {
                                         $check_password = $row['password'];
@@ -97,15 +107,16 @@
                                     }
                                     if ($authority == "admin" || $authority == "root")
                                     {
-                                        if(password_verify($password, $check_password)) { // if Password is hashed, this works
-                                            setcookie('admin', $user_id, time()+60*60, '/'); // set User Name as loged in
-                                            setcookie('authority', $authority, time()+60*60, '/'); // set Authority for access level
-                                            echo "<h3>Welcome, $user_id. You are loged in.<h3>";
+                                    	
+                                        if($user_pw == $check_password) { // If Password is hashed enter If statment.
+                                            setcookie('admin', $user_id, time()+60*60, '/'); // Set User Name as log in.
+                                            setcookie('authority', $authority, time()+60*60, '/'); // Set Permissions for different users.
+                                            echo "<h3>Welcome, $user_id. You are logged in.<h3>";
                                             header("refresh:2; url=index.php");
-                                        } else if ($user_id == "Jeremy" && $user_pw == "1234") {    // Account for Test
+                                        } else if ($user_id == "JeremyS" && $user_pw == "1234") {    // Testing account.
                                             setcookie('admin', $user_id, time()+60*60, '/');
                                             setcookie('authority', "root", time()+60*60, '/');
-                                            echo "Welcome, $user_id. You are loged in.";
+                                            echo "Welcome, $user_id. You are logggggggged in.";
                                             header("refresh:2; url=index.php");
                                         }
                                         else {
