@@ -14,3 +14,19 @@ It shows Top 10 movies and can subscript and has log in functionality.
 > - Delete Movies(only Root authority is able to delete)
 > - Top 10 searched Movies with graph
 > - User subscription
+
+
+> ### Responsive Design
+> 
+> iPad
+> 
+> ![MovieApp2](https://user-images.githubusercontent.com/74840727/124483934-75df2000-dddd-11eb-9ac5-40e1872cf8fd.png)
+> 
+> iPhone
+> 
+> ![MovieApp3](https://user-images.githubusercontent.com/74840727/124484662-3e24a800-ddde-11eb-9cfd-8b782eaaf876.png)
+
+
+
+
+
